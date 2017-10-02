@@ -5,7 +5,7 @@ import { MdSnackBar } from '@angular/material';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -19,12 +19,14 @@ export class LoginComponent {
   onLogin(): void {
     this.auth.login(this.user)
       .then((user) => {
-        this.snackBar.open(user.json().message, user.json().status, {
-          duration: 2000,
-        });
+        // this.snackBar.open(user.json().message, user.json().status, {
+        //   duration: 2000,
+        // });
         console.log(user.json());
         localStorage.setItem('token', user.json().auth_token);
-        this.gotoStatus();
+        this.gotoStatus().catch((err) => {
+          this.snackBar.open(err.message);
+        });
       })
       .catch((err) => {
         if (err.status === 422) {
@@ -48,7 +50,8 @@ export class LoginComponent {
   gotoRegister(): void {
     this.router.navigateByUrl('/register');
   }
-  gotoStatus(): void {
-    this.router.navigateByUrl('/status');
+  gotoStatus(): Promise<any> {
+    console.log('going to status?');
+    return this.router.navigateByUrl('/status');
   }
 }

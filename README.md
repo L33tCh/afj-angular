@@ -1,5 +1,7 @@
 # AfjAngular
 [![Build Status](https://travis-ci.org/L33tCh/afj-angular.svg?branch=master)](https://travis-ci.org/L33tCh/afj-angular)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/L33tCh/afj-angular.svg)](http://isitmaintained.com/project/L33tCh/afj-angular "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/L33tCh/afj-angular.svg)](http://isitmaintained.com/project/L33tCh/afj-angular "Percentage of issues still open")
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  BASE_URL: 'https://afj-flask.herokuapp.com/auth'
+  BASE_URL: 'http://localhost:5000/auth'
 };
