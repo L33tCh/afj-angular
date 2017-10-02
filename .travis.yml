@@ -20,7 +20,6 @@ after_script:
 - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
 script:
   - "npm rebuild node-sass"
-  - "webpack"
 deploy:
   provider: heroku
   skip_cleanup: true
