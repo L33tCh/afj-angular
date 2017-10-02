@@ -18,8 +18,12 @@ branches:
   - master
 after_script:
 - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
+script:
+  - "npm rebuild node-sass"
+  - "webpack"
 deploy:
   provider: heroku
+  skip_cleanup: true
   api_key:
     secure: TZv4RcMKMOXQF2Ry0xi4NHwVCt8gjUoEmfhmaDsvjyB2zJ+KQLv83Nsxcw9rfgfGVn17yLhGxJKzIO9ykYyTttXgqQ0RXREXcOtvX8Cc3J/gnJ1CjJfD/9Kc++R7gpFOE8bj47A3A0DPBQdMkIPNGZKu8xYCbsi7VyxDW5VeDcUKhlb7Ct4eTquXZVdh9EmtUbrLYAzPPLEbmGdwdwEzr+flP2BjiH+xopk16zoSNkKxMca8hPzcBdu9mE1BYxqM83CJ65bKe3LB/lY1/talLzNbvSxTBIeCz31lIGjKM+axl2oRoyILkzNy0Sxf9QN21/WjmI/n073ReocduJh0+2lP3k2dUVe/fa+xAFVc6IQemJ/I9or2NL/OAHGSw6hwM7G7QVZHFdmH1dXryOc0v+gbGbOXuXs1Gk3hHMXfzZxpP6PMdd7ky00zkIgnjpad2yBuJZoACNyefTrIHwwbMLvBkqHdKQePFdwdglBhj5EC73mgmf6TlqzKLgQqnlk2jJMSpvL+skUMoqAsezEW3ABoWR/LqELUfu0qkknrg/7bE6GUUyINA5wGBYMvQwwOniDJ37Nc0XaYYPpA2QTiLnuu2Z7qhA7X/F7PtQHudH4DvqllBng1Zr00/4LBKSo+s1JPwnNs/BtBD6Afr/Hx0GQh6mV+vVXFgsk3ZXQqZZE=
   app: afj-angular
