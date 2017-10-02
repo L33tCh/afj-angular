@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-4">
+    <h1>User Status</h1>
+    <hr><br>
+    <p>Logged In? {{ isLoggedIn }}</p>
+    <p>Until: {{ timeOut | date:'mediumTime' }}</p>
+    <p>Time now: {{ myDate | date:'mediumTime' }}</p>
+  </div>
+</div>
+<button type="button" class="btn btn-default" (click)="gotoLogin()" *ngIf="!isLoggedIn">Register</button>
+<button type="button" class="btn btn-default" (click)="gotoRegister()" *ngIf="!isLoggedIn">Login</button>
