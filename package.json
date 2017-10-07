@@ -9,7 +9,9 @@
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "private": true,
   "engines": {
@@ -19,7 +21,7 @@
   "dependencies": {
     "@angular/animations": "^4.4.3",
     "@angular/cdk": "^2.0.0-beta.11",
-    "@angular/cli": "1.4.1",
+    "@angular/cli": "1.4.5",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
@@ -32,7 +34,8 @@
     "core-js": "^2.4.1",
     "express": "^4.16.1",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.18",
+    "snyk": "^1.42.4"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^4.2.4",
@@ -53,5 +56,6 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
-  }
+  },
+  "snyk": true
 }
