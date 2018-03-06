@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MdSnackBar} from '@angular/material';
+import {MatSnackBar} from '@angular/material';
 import {Router} from '@angular/router';
 
 /**
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   templateUrl: 'snack.component.html',
 })
 export class SnackBarOverviewExampleComponent {
-  constructor(public snackBar: MdSnackBar, public router: Router) {}
+  constructor(public snackBar: MatSnackBar, public router: Router) {}
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {

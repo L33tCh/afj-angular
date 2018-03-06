@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import {Router} from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private auth: AuthService,
-    public snackBar: MdSnackBar
+    public snackBar: MatSnackBar
   ) {}
   onLogin(): void {
     this.auth.login(this.user)
